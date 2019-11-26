@@ -1,0 +1,530 @@
+-- phpMyAdmin SQL Dump
+-- version 4.7.4
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Nov 26, 2019 at 08:07 AM
+-- Server version: 10.1.28-MariaDB
+-- PHP Version: 5.6.32
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `my locality`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cando`
+--
+
+CREATE TABLE `cando` (
+  `h_id` int(10) NOT NULL,
+  `s_id` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `cando`
+--
+
+INSERT INTO `cando` (`h_id`, `s_id`) VALUES
+(2, 104),
+(10, 103),
+(15, 102);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `events`
+--
+
+CREATE TABLE `events` (
+  `local_id` int(10) NOT NULL,
+  `e_id` int(10) NOT NULL,
+  `ename` text NOT NULL,
+  `e_description` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `events`
+--
+
+INSERT INTO `events` (`local_id`, `e_id`, `ename`, `e_description`) VALUES
+(13, 145, 'guru', 'nanak'),
+(11, 301, 'Talent Show', 'Every resident is encouraged to show their talent and entertain co-residents.'),
+(14, 303, 'Bakrid', 'Wishing and greeting the muslims on their festive day and having the delicious dishes served by them.'),
+(9, 304, 'ganesh puja', 'do puja');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `e_posts`
+--
+
+CREATE TABLE `e_posts` (
+  `local_id` int(10) NOT NULL,
+  `e_id` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `houses`
+--
+
+CREATE TABLE `houses` (
+  `h_id` int(10) NOT NULL,
+  `housename` text NOT NULL,
+  `d_no` varchar(20) NOT NULL,
+  `residence_type` varchar(20) NOT NULL,
+  `head_of_fam` varchar(20) NOT NULL,
+  `r_o` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `houses`
+--
+
+INSERT INTO `houses` (`h_id`, `housename`, `d_no`, `residence_type`, `head_of_fam`, `r_o`) VALUES
+(1, 'sri sai nilayam', '29-42-13', 'individual', 'kumar', 'own'),
+(2, 'Ramya towers', '98-32-80', 'flat', 'Ramya sree', 'own'),
+(3, 'lakshmi nilayam', '29-42-13', 'individual', 'lakshmi', 'own'),
+(4, 'C011', '84-20-65', 'apartment flat', 'Navya', 'own'),
+(5, 'nirmala residence', '54-64-54', 'individual', 'Chandra', 'own'),
+(9, 'varma residency', '12-24-87', 'individual house', 'Vishal Varma', 'rent'),
+(10, 'D021', '32-44-27', 'apartment flat', 'Pravin', 'own'),
+(11, 'Priya residency', '09-34-07', 'individual house', 'Priya', 'rent'),
+(13, 'Harsha residency', '02-28-80', 'individual house', 'Harsha', 'own'),
+(14, 'C001', '87-04-49', 'apartment flat', 'Harish', 'own'),
+(15, 'B051', '10-84-07', 'apartment flat', 'Sundeep', 'rent'),
+(16, 'venu residency', '15-24-80', 'individual house', 'venu', 'own'),
+(17, 'vinay nilayam', '43-27-85', 'individual house', 'vinay', 'rent'),
+(19, 'A101', '12-21-32', 'apartment flat', 'Suhitha', 'own');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `localists`
+--
+
+CREATE TABLE `localists` (
+  `local_id` int(10) NOT NULL,
+  `name` text NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `contact_no` int(10) NOT NULL,
+  `designation` text NOT NULL,
+  `gender` text NOT NULL,
+  `optloc` text NOT NULL,
+  `password` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `localists`
+--
+
+INSERT INTO `localists` (`local_id`, `name`, `email`, `contact_no`, `designation`, `gender`, `optloc`, `password`) VALUES
+(2, 'ramya sree', '', 2147483647, 'Auditor-govt', 'female', 'both', '123'),
+(4, 'Sai', '', 2147483647, 'deloitte employee-company', 'male', 'resident', '0'),
+(6, 'Akhil', '', 2147483647, 'infosys employee-company', 'male', 'local-servicer', '0'),
+(7, 'Vishal Varma', '', 2147483647, 'TCS employee-company', 'male', 'local-servicer', '0'),
+(9, 'Navya', '', 2147483647, 'amazon employee-company', 'female', 'resident', '0'),
+(11, 'Chinmay', '', 2147483647, ' mirchi business', 'female', 'resident', '0'),
+(12, 'Naveen', '', 2147483647, 'infosys employee-company', 'male', 'local-servicer', '0'),
+(13, 'NavyaSri', '', 2147483647, 'sbi employee-bank', 'female', 'resident', '0'),
+(14, 'Narayana', '', 2147483647, 'itech employee-company', 'male', 'resident', '0'),
+(15, 'Chaitanya', '', 2147483647, 'IT employee-company', 'male', 'resident', '0'),
+(16, 'Harshitha', '', 2147483647, 'bookkeeper-business', 'female', 'resident', '0'),
+(17, 'Priya', '', 2147483647, 'sbi employee-bank', 'female', 'resident', '0'),
+(18, 'Harsha', '', 2147483647, 'shopkeeper-business', 'male', 'local-servicer', '0'),
+(30, 'mallika', 'mallika99@gmail.com', 1543211234, 'student at gitam', 'female', 'resident', '30'),
+(123, 'cham', 'cham', 123, 'cham', 'f', 'local-servicer', '123');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `localproblems`
+--
+
+CREATE TABLE `localproblems` (
+  `local_id` int(10) NOT NULL,
+  `p_id` int(10) NOT NULL,
+  `pname` text NOT NULL,
+  `p_description` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `localproblems`
+--
+
+INSERT INTO `localproblems` (`local_id`, `p_id`, `pname`, `p_description`) VALUES
+(11, 201, 'noise pollution', 'lots of noise'),
+(14, 202, 'water supply', 'water supply is becoming lesser day by day and the timing of releasing the water is also not acceptable'),
+(14, 203, 'stray cattle', ' stray cattle roaming here and there and destroying the gardens of household');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `local_services`
+--
+
+CREATE TABLE `local_services` (
+  `l_id` int(10) NOT NULL,
+  `shopname` text NOT NULL,
+  `d_no` varchar(20) NOT NULL,
+  `specifications` text NOT NULL,
+  `r_o` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `local_services`
+--
+
+INSERT INTO `local_services` (`l_id`, `shopname`, `d_no`, `specifications`, `r_o`) VALUES
+(2, 'surya exports and imports', '12', 'cotton exporting and importing', 'own'),
+(5, 'Sravani mobiles', '19', 'mobile recharging and accessories', 'rent'),
+(6, 'xerox shop', '43', 'xerox and binding', 'rent'),
+(7, 'sai bakery', '32', 'homemade sweets and candies', 'own'),
+(8, 'prabhu medicals', '9', 'medicines and tonics', 'own'),
+(11, 'restocafe', '28-42-12', 'food and bakery', 'own'),
+(98, 'richie', '49-32-9', 'dresses and sarees', 'rent');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `lp_posts`
+--
+
+CREATE TABLE `lp_posts` (
+  `local_id` int(10) NOT NULL,
+  `p_id` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `lp_posts`
+--
+
+INSERT INTO `lp_posts` (`local_id`, `p_id`) VALUES
+(14, 202),
+(14, 203);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `miniservices`
+--
+
+CREATE TABLE `miniservices` (
+  `local_id` int(10) NOT NULL,
+  `s_id` int(10) NOT NULL,
+  `sname` text NOT NULL,
+  `s_description` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `miniservices`
+--
+
+INSERT INTO `miniservices` (`local_id`, `s_id`, `sname`, `s_description`) VALUES
+(15, 102, 'craft work', 'different varieties of crafts are made out of waste materials like used plastic bottles can be turned into a pot to keep small plants and many more'),
+(10, 103, 'catering', 'all kinds of dishes are available here'),
+(2, 104, 'tailoring', 'stitching clothes and many more types of stitching'),
+(12345678, 1235, 'jamm', 'food');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `resides`
+--
+
+CREATE TABLE `resides` (
+  `local_id` int(10) NOT NULL,
+  `h_id` int(10) NOT NULL,
+  `joindate` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `resides`
+--
+
+INSERT INTO `resides` (`local_id`, `h_id`, `joindate`) VALUES
+(2, 2, '2000-03-12'),
+(4, 4, '2000-03-12'),
+(9, 9, '2005-08-10'),
+(11, 11, '2015-07-28'),
+(13, 13, '2019-12-13'),
+(14, 14, '1998-10-31'),
+(15, 15, '2005-08-22'),
+(16, 16, '2009-05-05'),
+(17, 17, '2015-11-08');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sale`
+--
+
+CREATE TABLE `sale` (
+  `local_id` int(10) NOT NULL,
+  `d_no` varchar(20) NOT NULL,
+  `type` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `sale`
+--
+
+INSERT INTO `sale` (`local_id`, `d_no`, `type`) VALUES
+(16, '15-24-80', 'individual house'),
+(11, '29-13-10', 'flat'),
+(15, '29-42-13', 'flat'),
+(15, '29-42-14', 'flat'),
+(18, '29-42-42', 'flat');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `to_let`
+--
+
+CREATE TABLE `to_let` (
+  `local_id` int(10) NOT NULL,
+  `d_no` varchar(20) NOT NULL,
+  `rent` int(10) NOT NULL,
+  `type` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `to_let`
+--
+
+INSERT INTO `to_let` (`local_id`, `d_no`, `rent`, `type`) VALUES
+(11, '29-10-10', 4500, 'flat'),
+(17, '29-8-8', 10000, 'flat'),
+(18, '30-14-33', 2000, 'individual'),
+(98, '49-35-9', 30000, 'flat'),
+(14, '87-4-50', 5000, 'apartment');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `uses`
+--
+
+CREATE TABLE `uses` (
+  `local_id` int(11) NOT NULL,
+  `l_id` int(11) NOT NULL,
+  `joindate` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `uses`
+--
+
+INSERT INTO `uses` (`local_id`, `l_id`, `joindate`) VALUES
+(2, 2, '2002-02-02'),
+(6, 6, '2007-03-20'),
+(7, 7, '1999-02-17'),
+(8, 8, '2009-02-11');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `cando`
+--
+ALTER TABLE `cando`
+  ADD PRIMARY KEY (`s_id`),
+  ADD KEY `s_id` (`h_id`);
+
+--
+-- Indexes for table `events`
+--
+ALTER TABLE `events`
+  ADD PRIMARY KEY (`e_id`),
+  ADD KEY `local_id` (`local_id`);
+
+--
+-- Indexes for table `e_posts`
+--
+ALTER TABLE `e_posts`
+  ADD PRIMARY KEY (`e_id`),
+  ADD KEY `local_id` (`local_id`);
+
+--
+-- Indexes for table `houses`
+--
+ALTER TABLE `houses`
+  ADD PRIMARY KEY (`h_id`);
+
+--
+-- Indexes for table `localists`
+--
+ALTER TABLE `localists`
+  ADD PRIMARY KEY (`local_id`);
+
+--
+-- Indexes for table `localproblems`
+--
+ALTER TABLE `localproblems`
+  ADD PRIMARY KEY (`p_id`),
+  ADD KEY `localproblems_ibfk_1` (`local_id`);
+
+--
+-- Indexes for table `local_services`
+--
+ALTER TABLE `local_services`
+  ADD PRIMARY KEY (`l_id`);
+
+--
+-- Indexes for table `lp_posts`
+--
+ALTER TABLE `lp_posts`
+  ADD PRIMARY KEY (`p_id`),
+  ADD KEY `local_id` (`local_id`);
+
+--
+-- Indexes for table `miniservices`
+--
+ALTER TABLE `miniservices`
+  ADD PRIMARY KEY (`s_id`),
+  ADD KEY `miniservices_ibfk_1` (`local_id`);
+
+--
+-- Indexes for table `resides`
+--
+ALTER TABLE `resides`
+  ADD PRIMARY KEY (`h_id`,`local_id`),
+  ADD KEY `resides_ibfk_1` (`local_id`);
+
+--
+-- Indexes for table `sale`
+--
+ALTER TABLE `sale`
+  ADD PRIMARY KEY (`d_no`),
+  ADD KEY `local_id` (`local_id`);
+
+--
+-- Indexes for table `to_let`
+--
+ALTER TABLE `to_let`
+  ADD PRIMARY KEY (`d_no`),
+  ADD KEY `local_id` (`local_id`);
+
+--
+-- Indexes for table `uses`
+--
+ALTER TABLE `uses`
+  ADD PRIMARY KEY (`l_id`,`local_id`),
+  ADD KEY `local_id` (`local_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `events`
+--
+ALTER TABLE `events`
+  MODIFY `e_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=305;
+
+--
+-- AUTO_INCREMENT for table `e_posts`
+--
+ALTER TABLE `e_posts`
+  MODIFY `e_id` int(10) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `localists`
+--
+ALTER TABLE `localists`
+  MODIFY `local_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=124;
+
+--
+-- AUTO_INCREMENT for table `localproblems`
+--
+ALTER TABLE `localproblems`
+  MODIFY `p_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=204;
+
+--
+-- AUTO_INCREMENT for table `lp_posts`
+--
+ALTER TABLE `lp_posts`
+  MODIFY `p_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=204;
+
+--
+-- AUTO_INCREMENT for table `miniservices`
+--
+ALTER TABLE `miniservices`
+  MODIFY `s_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1236;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `cando`
+--
+ALTER TABLE `cando`
+  ADD CONSTRAINT `h_id` FOREIGN KEY (`h_id`) REFERENCES `houses` (`h_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `s_id` FOREIGN KEY (`s_id`) REFERENCES `miniservices` (`s_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `events`
+--
+ALTER TABLE `events`
+  ADD CONSTRAINT `local_id` FOREIGN KEY (`local_id`) REFERENCES `localists` (`local_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `e_posts`
+--
+ALTER TABLE `e_posts`
+  ADD CONSTRAINT `e_posts_ibfk_1` FOREIGN KEY (`e_id`) REFERENCES `events` (`e_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `e_posts_ibfk_2` FOREIGN KEY (`local_id`) REFERENCES `localists` (`local_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `localproblems`
+--
+ALTER TABLE `localproblems`
+  ADD CONSTRAINT `localproblems_ibfk_1` FOREIGN KEY (`local_id`) REFERENCES `localists` (`local_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `lp_posts`
+--
+ALTER TABLE `lp_posts`
+  ADD CONSTRAINT `lp_posts_ibfk_1` FOREIGN KEY (`local_id`) REFERENCES `localists` (`local_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `lp_posts_ibfk_2` FOREIGN KEY (`p_id`) REFERENCES `localproblems` (`p_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `resides`
+--
+ALTER TABLE `resides`
+  ADD CONSTRAINT `resides_ibfk_1` FOREIGN KEY (`local_id`) REFERENCES `localists` (`local_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `resides_ibfk_2` FOREIGN KEY (`h_id`) REFERENCES `houses` (`h_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `sale`
+--
+ALTER TABLE `sale`
+  ADD CONSTRAINT `sale_ibfk_1` FOREIGN KEY (`local_id`) REFERENCES `localists` (`local_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `uses`
+--
+ALTER TABLE `uses`
+  ADD CONSTRAINT `l_id` FOREIGN KEY (`l_id`) REFERENCES `local_services` (`l_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
