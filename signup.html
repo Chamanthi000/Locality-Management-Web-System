@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="signup.css">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <title>Sign up</title>
+
+<style>
+input[type=submit] {
+  width: 200px;
+  
+  padding: 12px 60px;
+  margin-top: 10px;
+  margin-left:15px;
+  margin-bottom:50px;
+  height:50px;
+  border-radius:5px;
+  box-shadow:2px 2px 2px 0px  lightgray;
+  box-sizing: border-box;
+  border: 1px solid mediumturquoise;
+  background-color:mediumturquoise;
+  color: white;
+}
+input[type=submit]:hover {
+    background-color:lightgrey;
+    color:darkgrey;
+    border:none;
+}</style>
+</head>
+
+<body>
+  <div class="header">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspMY LOCALITY</div>
+
+  <div class="title">SIGN UP</div>
+<div class="bg">
+    <img src="pics\signup.svg">
+</div>
+<form class="form" method="post" action="signup1.php">
+
+    <div class="row">
+        <div class="col-lg-8"> 
+            <label>User Name</label>
+        </div>
+    </div>
+
+    <div class="row part">
+        <div class="col-lg-8">
+            <input type="text" placeholder="Enter your name" name="username" required class="filler">
+        </div>
+        
+    </div>
+    
+
+    <div class="row">
+        <div class="col-lg-8"><label>Email</label></div>
+    </div>
+    
+    <div class="row part">
+            <div class="col-lg-8">
+                <input type="text" name="email" required placeholder="Enter your Email-address" class="filler">
+            </div>
+            
+    </div>
+  
+    <div class="row">
+        <div class="col-lg-8"><label>Gender</label></div>
+    </div>
+
+    <div class="row part">
+        <div class="col-lg-4">
+          <label class="radio-inline">
+              <input type="radio" name="gen" value="male" required>Male
+          </label>
+        </div>
+        <div class="col-lg-4">
+          <label class="radio-inline">
+              <input type="radio" name="gen" value="female" required>Female
+          </label>
+        </div>
+        <div class="col-lg-4">
+                <label class="radio-inline">
+                    <input type="radio" name="gen" value="others"required>others
+                </label>
+              </div>
+    </div>
+    
+    <div class="row">
+            <div class="col-lg-6"><label>Type of Local</label></div>
+        </div>
+    
+        <div class="row part">
+            <div class="col-lg-4">
+              <label class="radio-inline">
+                  <input type="radio" name="optloc" value="resident" >Resident
+              </label>
+            </div>
+            <div class="col-lg-4">
+              <label class="radio-inline">
+                  <input type="radio" name="optloc" value="local-servicer">Local-servicer
+              </label>
+            </div>
+            <div class="col-lg-4">
+                <label class="radio-inline">
+                    <input type="radio" name="optloc" value="both">Both
+                </label>
+              </div>
+        </div>
+
+    <div class="row">
+         <div class="col-lg-6"><label>Designation</label></div>
+    </div>
+      
+    <div class="row part2">
+        <div class="col-lg-6">
+            <input type="text" name="designation" required placeholder="Eat.Sleep.Repeat" class="filler3" >
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-8"><label>Contact number</label></div>
+    </div>
+
+    
+    <div class="row part">
+        <div class="col-lg-8">
+            <input type="text" name="contactno" required placeholder=" Enter your contact number" class="filler">
+        </div>
+    </div>
+
+    <div class="row">
+            <div class="col-lg-8"><label>User ID</label></div>
+        </div>
+    
+        
+        <div class="row part">
+            <div class="col-lg-8">
+                <input type="text" name="userid"   placeholder=" Enter your User ID" class="filler">
+            </div>
+        </div>
+
+        <div class="row">
+                <div class="col-lg-8"><label>Create Password</label></div>
+            </div>
+        
+            
+            <div class="row part">
+                <div class="col-lg-8">
+                    <input type="password" name="password" required placeholder=" " class="filler">
+                </div>
+            </div>
+            <div class="row">
+                    <div class="col-lg-8"><label>Confirm Password</label></div>
+                </div>
+            
+                
+                <div class="row part">
+                    <div class="col-lg-8">
+                        <input type="password" name="password" required placeholder=" " class="filler">
+                    </div>
+                </div>
+               
+                <input type = "submit" onClick="parent.open('tutlogin.php')"value = "SIGNUP" >
+                               
+        
+        
+    </form>   
+
+</body>
+</html>

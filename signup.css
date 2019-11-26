@@ -1,0 +1,162 @@
+.header
+{   font-weight: 500;
+    height:50px;
+    width:100%;
+    background-color:lightgrey;
+    float:left;
+    box-shadow: 0 0 5px 0 grey;
+    font-size: 30px;
+    color:#576271;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+
+
+
+.title
+{   float:left;
+    margin-top:50px;
+    font-weight: 500;
+    color: #576271;
+    margin-left:80px;
+    font-size:20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+.form
+{
+    float:left;
+    margin-left:80px;
+    margin-top:-625px;
+    font-size:20px;
+    font-weight:400;
+    color:black;
+}
+
+input{
+    padding-left:10px;
+}
+
+.part
+{
+    margin-bottom:20px;
+}
+.filler
+{
+    text-align:left;
+    background-color: lightgray;
+    margin:10px 0px;
+    border:1px solid lightgray;
+    border-radius:5px;
+    height:40px;
+    width:530px;
+}
+
+.space label
+{
+    margin-right:100px;
+
+}
+
+.filler3
+{
+    text-align:left;
+    background-color: lightgray;
+    margin:10px 0px;;
+    border:1px solid lightgray;
+    border-radius:5px;
+    height:150px;
+    width:530px;
+}
+
+.filler4
+{
+    text-align:center;
+    background-color: lightgray;
+    margin:10px 0px;
+    border:1px solid lightgray;
+    border-radius:5px;
+    height:40px;
+    width:260px;  
+    color:silver;
+}
+.p1
+{
+    font-size:10px;
+    color:lightgrey;
+    width:530px;
+}
+
+button
+{
+    background-color:mediumturquoise;
+    color:white;
+    height:50px;
+    width:250px;
+    margin-left:10px;
+    text-align: center;
+    box-shadow: 0 0 5px 0 grey;
+    border:1px solid mediumturquoise;
+}
+.bg img{
+    margin-left:40%;
+    height:750px;
+    width:650px;
+}
+
+.button
+{
+    margin-bottom:10px;
+    border-radius:5px;
+    box-shadow:2px 2px 2px 0px  lightgray;
+    border:none;
+}
+
+.part2
+{
+    margin-bottom:25px;
+}
+.row button a{
+    color:white;
+    
+}
+.row  button a:hover{
+    color:darkgray;
+    background-color: lightgray;
+    text-decoration: none;
+}
+.row .button button:hover{
+    background-color: lightgray;
+    text-decoration: none;
+    border:1px darkgray;
+}
+
+.button {
+    background-color: mediumturquoise; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 8px;
+    width:300px;
+    box-shadow: 0 0 5px 0 grey;
+    margin-left: 15px;
+  }
+  
+  
+  
+  
+.button:hover {
+    background-color:lightgray;
+    color: darkgray;
+  }
+ 

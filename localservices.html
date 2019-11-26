@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="localservices.css">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <title>local services</title>
+
+
+</head>
+
+<body>
+  <div class="header">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspMY LOCALITY
+    <span><button><a href="tutlogin.php">log out</a></button></span>
+  </div>
+<div class="head">
+    <p>LOCAL SERVICES</p>
+</div>
+<div class="pic">
+  <img src="pics\undraw_empty_cart_co35.svg">
+</div>
+<div class="container">
+              
+  <table class="table table-hover">
+    
+    <tbody>
+      <?php include('locserst.php'); ?> 
+    </tbody>
+  </table>
+</div>
+<div class="post">
+  <h1>
+    Post a Local-Service</h1>
+</div>
+<form class=form method="post" action="locsers.php">
+
+
+
+      <div class="row">
+              <div class="col-lg-8"><label>Shop Name</label></div>
+  
+          </div>
+  
+  
+          <div class="row part">
+              <div class="col-lg-8">
+                  <input type="text" name="sname"placeholder=" Enter shop name" class="filler">
+              </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-8"><label>Door No</label></div>
+
+        </div>
+
+
+        <div class="row part">
+            <div class="col-lg-8">
+                <input type="text" name="dno" placeholder=" Enter door no" class="filler">
+            </div>
+        </div>
+  
+          <div class="row">
+                  <div class="col-lg-8"><label>Services</label></div>
+              </div>
+  
+  
+              <div class="row part">
+                  <div class="col-lg-6">
+                      <input type="text" name="description" placeholder="describe the Services available" class="filler3">
+                  </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-8"><label>Rent/Own</label></div>
+    
+            </div>
+    
+    
+            <div class="row part">
+                <div class="col-lg-8">
+                    <input type="text" name="ro" placeholder=" Enter rent/own" class="filler">
+                </div>
+            </div>
+  
+          
+            <input type = "submit" value = "POST" >  
+  
+  </form>
+  <div class="pic2 ">
+    <img src="pics\undraw_add_to_cart_vkjp.svg">
+  </div>
+</body>
+</html>
