@@ -34,8 +34,6 @@ rents.
 
 ## 2.DATABASE DESIGN USING E-R DIAGRAM
 
-
-
 The relational model depicts the e-r diagram of the project.
 
 ### ENTITIES:
@@ -90,6 +88,11 @@ the start date of the shop.
  DATABASE DESIGN USING RELATIONAL MODEL
 
 <img width="448" alt="Screenshot 2023-03-16 at 2 09 15 PM" src="https://user-images.githubusercontent.com/45826511/225713597-39f1bc8d-e602-4050-80fd-837232ff9f3b.png">
+
+Login page example:
+
+ 
+![Picture1](https://user-images.githubusercontent.com/45826511/225716935-773e832e-de80-413c-bc30-fea8c921e60f.png)
 
 
 check more in documentation: https://github.com/Chamanthi000/Locality-Management-Web-System/blob/master/final%20documentation.pdf
