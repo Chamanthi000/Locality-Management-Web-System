@@ -62,5 +62,8 @@ the start date of the shop.
 
 E-R DIAGRAM
 3. DATABASE DESIGN USING RELATIONAL MODEL
+
+
+
 <img width="448" alt="Screenshot 2023-03-16 at 2 09 15 PM" src="https://user-images.githubusercontent.com/45826511/225713597-39f1bc8d-e602-4050-80fd-837232ff9f3b.png">
 
